@@ -17,6 +17,7 @@
 
 <style lang="sass">
     .first
+        background-color: $test
         position: absolute
         right: 0
         top: 0

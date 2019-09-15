@@ -1,10 +1,10 @@
 module.exports = {
-    css: {
-      loaderOptions: {
-        sass: {
-          data: `
-            @import "@/sass/main.sass";`
-        }
-      }
-    }
+  css: {
+    loaderOptions: {
+      sass: {
+        data: `@import "~@/sass/main.sass"`,
+      },
+    },
+  },
+
   };
