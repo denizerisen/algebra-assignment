@@ -20,7 +20,7 @@ import SlideInputs from './components/SlideInputs.vue';
   },
 })
 export default class App extends Vue {
-  text: string = "null";
+  text: string = "Lorem ipsum dolor sit amet, consectetur adipiscing";
   inputChangedHandler(text){
     this.text = text;
   }

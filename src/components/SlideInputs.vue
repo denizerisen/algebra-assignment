@@ -1,6 +1,6 @@
 <template>
   <div class="slide__inputs">
-      <input type="text" class="input" v-on:input="inputChangedHandler($event.target.value)"/>
+      <input type="text" class="input" maxlength="55" v-on:input="inputChangedHandler($event.target.value)"/>
   </div>
 </template>
 
