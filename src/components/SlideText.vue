@@ -7,9 +7,9 @@
     <h2 class="slide__subheader">{{this.subheaderText}}</h2>
     <p class="slide__text">{{this.text}}</p>
   
-        <!--<input type="text" class="input" v-model="headerText"/>
-        <input type="text" class="input" v-model="subheaderText"/>
-        <input type="text" class="input" v-model="text"/>-->
+    <input type="text" class="input" v-model="headerText"/>
+    <input type="text" class="input" v-model="subheaderText"/>
+    <input type="text" class="input" v-model="text"/>
   </div>
 </template>
 
@@ -34,7 +34,7 @@
         text-align: center
         align-self: center
         justify-self: center
-        width: 660px
+        width: 80%
     .header
         max-height: 170px
     .slide__header, .slide__subheader

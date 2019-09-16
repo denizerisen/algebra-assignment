@@ -28,7 +28,7 @@ export default class App extends Vue {}
     font-family: 'Avenir', Helvetica, Arial, sans-serif
     -webkit-font-smoothing: antialiased
     -moz-osx-font-smoothing: grayscale
-    max-width: 1440px
+    
   .grid
     display: grid
     grid-template-columns: 60% 40%

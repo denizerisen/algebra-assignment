@@ -22,14 +22,18 @@
         position: absolute
         right: 0
         top: 0
-        width: 260px
+        width: 17.5%
     .second
         position: absolute
-        width: 510px
+        right: 0.75em
+        width: 35%
         z-index: 1
     .slide__image
+        position: absolute
+        top: 5em
+        right: 3em
         border-radius: 50%
         z-index: 3
-        width: 400px
+        width: 30%
 
 </style>
