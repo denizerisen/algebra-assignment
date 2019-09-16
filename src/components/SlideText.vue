@@ -2,25 +2,28 @@
   <div class="slide__left">
     <div class="header">
     <img  src="../assets/header-text-background.svg" width="100%"/>
-    <h1 class="slide__header">{{headerText}}</h1>
+    <h1 class="slide__header">{{text}}</h1>
     </div>
     <h2 class="slide__subheader">{{this.subheaderText}}</h2>
-    <p class="slide__text">{{this.text}}</p>
+    <p class="slide__text">{{this.subheaderText}}</p>
   
-    <input type="text" class="input" v-model="headerText"/>
-    <input type="text" class="input" v-model="subheaderText"/>
-    <input type="text" class="input" v-model="text"/>
+        <!--<input type="text" class="input" v-model="headerText"/>
+        <input type="text" class="input" v-model="subheaderText"/>
+        <input type="text" class="input" v-model="text"/> -->
   </div>
 </template>
 
 <script lang="ts">
-    import {Component, Vue} from 'vue-property-decorator';
+    import {Component, Vue, Prop} from 'vue-property-decorator';
 
     @Component
     export default class SlideText extends Vue { 
-        headerText: string = 'Lorem ipsum dolor sit amet, consectetur adipiscing'
-        subheaderText: string = 'Lorem ipsum dolor sit amet, consectetur adipiscing'
-        text: string = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dignissim sagittis diam in molesite. Morbi vulputate volutpat massa, ut tincidunt nunc convallisa. Suspendisse dapibus diam sit amet nisl gravida. '
+        @Prop(String)
+        text;
+
+        //headerText: string = 'Lorem ipsum dolor sit amet, consectetur adipiscing'
+       subheaderText: string = 'Lorem ipsum dolor sit amet, consectetur adipiscing'
+        //text: string = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dignissim sagittis diam in molesite. Morbi vulputate volutpat massa, ut tincidunt nunc convallisa. Suspendisse dapibus diam sit amet nisl gravida. '
     }
 
 </script>

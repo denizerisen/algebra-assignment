@@ -1,7 +1,8 @@
 <template>
   <div id="app" class="grid">
-    <SlideText/>
+    <SlideText :text="text"/>
     <SlideImage/>
+    <SlideInputs @getText="inputChangedHandler($event)"/>
   </div>
 </template>
 
@@ -9,14 +10,21 @@
 import { Component, Vue } from 'vue-property-decorator';
 import SlideText from './components/SlideText.vue';
 import SlideImage from './components/SlideImage.vue';
+import SlideInputs from './components/SlideInputs.vue';
 
 @Component({
   components: {
     SlideText,
-    SlideImage
+    SlideImage,
+    SlideInputs,
   },
 })
-export default class App extends Vue {}
+export default class App extends Vue {
+  text: string = "null";
+  inputChangedHandler(text){
+    this.text = text;
+  }
+}
 </script>
 
 <style lang="sass">
