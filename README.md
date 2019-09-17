@@ -1,4 +1,4 @@
-# algebra-assignment
+# vue ts assignment
 
 ## Project setup
 ```
