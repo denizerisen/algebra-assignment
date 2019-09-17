@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="grid">
-    <SlideText :text="text"/>
+    <SlideText :headerText="headerText" :subheaderText="subheaderText" :text="text"/>
     <SlideImage/>
     <SlideInputs @getText="inputChangedHandler($event)"/>
   </div>
@@ -20,9 +20,25 @@ import SlideInputs from './components/SlideInputs.vue';
   },
 })
 export default class App extends Vue {
-  text: string = "Lorem ipsum dolor sit amet, consectetur adipiscing";
-  inputChangedHandler(text){
-    this.text = text;
+  headerText: string = 'Lorem ipsum dolor sit amet, consectetur adipiscing';
+  subheaderText: string = 'Lorem ipsum dolor sit amet, consectetur adipiscing';
+  text: string = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dignissim sagittis diam in molesite. Morbi vulputate volutpat massa, ut tincidunt nunc convallisa. Suspendisse dapibus diam sit amet nisl gravida. '
+
+  inputChangedHandler($event){
+    console.log($event.target.name);
+    console.log($event.target.value);
+    switch($event.target.name){
+      case 'headerText':
+        this.headerText = $event.target.value;
+        break;
+      case 'subheaderText':
+        this.subheaderText = $event.target.value;
+        break;
+      case 'text':
+        this.text = $event.target.value;
+        break;
+    }
+    
   }
 }
 </script>
