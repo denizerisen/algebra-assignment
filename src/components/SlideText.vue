@@ -1,55 +1,61 @@
 <template>
-  <div class="slide__left">
-    <div class="header">
-    <img  src="../assets/header-text-background.svg" width="100%"/>
-    <h1 class="slide__header">{{headerText}}</h1>
+  <div class="slide__column--left">
+    <div class="slide__title__area">
+        <img  src="../assets/header-title-background.svg" width="100%"/>
+        <h1 class="slide__title__area__title">{{title}}</h1>
     </div>
-    <h2 class="slide__subheader">{{this.subheaderText}}</h2>
-    <p class="slide__text">{{this.text}}</p>
-  
-    <input type="text" class="input" v-model="headerText"/>
-    <input type="text" class="input" v-model="subheaderText"/>
-    <input type="text" class="input" v-model="text"/>
+    <h2 class="slide__subtitle">{{subtitle}}</h2>
+    <p class="slide__bodytext">{{bodyText}}</p>
   </div>
 </template>
 
 <script lang="ts">
-    import {Component, Vue} from 'vue-property-decorator';
+    import {Component, Vue, Prop} from 'vue-property-decorator';
 
     @Component
-    export default class SlideText extends Vue { 
-        headerText: string = 'Lorem ipsum dolor sit amet, consectetur adipiscing'
-        subheaderText: string = 'Lorem ipsum dolor sit amet, consectetur adipiscing'
-        text: string = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dignissim sagittis diam in molesite. Morbi vulputate volutpat massa, ut tincidunt nunc convallisa. Suspendisse dapibus diam sit amet nisl gravida. '
-    }
+    export default class SlideText extends Vue {
+        @Prop(String)
+        title !: string;
 
+        @Prop(String)
+        subtitle !: string;
+
+        @Prop(String)
+        bodyText !: string;
+    }
 </script>
 
 <style lang="sass">
-    .slide__left
+    .slide__column--left
         font-family: 'Chewy', cursive
         color: white
         margin-top: 60px
-        padding: 1em
+        padding-left: 100px
         text-align: center
         align-self: center
         justify-self: center
-        width: 80%
-    .header
+        width: 100%
+
+    .slide__title__area
         max-height: 170px
-    .slide__header, .slide__subheader
+
+    .slide__title, .slide__subtitle
         font-weight: 100
-    .slide__header
-        font-size: 3.5em
+
+    .slide__title__area__title
+        font-size: 3.4em
         line-height: 1
+        padding: 0 15px
         transform: translateY(100%) translateY(-5.2em)
+        height: 110px
         
-    .slide__subheader
+    .slide__subtitle
         font-size: 35px
         margin: 0
         padding: 0 10px
-    .slide__text
-        font-family: 'Gaegu', cursive
+
+    .slide__bodytext
+        +font($font-gaegu, 100)
         text-align: left
         margin-top: 2em
         padding-right: 15px
