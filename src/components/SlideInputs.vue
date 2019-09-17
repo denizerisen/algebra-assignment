@@ -20,6 +20,14 @@ export default class SlideInputs extends Vue {
 </script>
 
 
-<style>
+<style lang="sass">
+  .slide__inputs
+    width: 100%
+    background: darkgray
+    height: 80px
+    margin: 0 auto
+  .slide__input
+    width: 25%
+    margin: 3% 
 
 </style>

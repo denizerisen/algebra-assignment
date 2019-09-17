@@ -1,7 +1,9 @@
 <template>
-  <div id="app" class="grid">
-    <SlideText :headerText="headerText" :subheaderText="subheaderText" :text="text"/>
-    <SlideImage/>
+  <div id="app" >
+    <div class="grid">
+      <SlideText :headerText="headerText" :subheaderText="subheaderText" :text="text"/>
+      <SlideImage/>
+    </div>
     <SlideInputs @getText="inputChangedHandler($event)"/>
   </div>
 </template>
@@ -52,9 +54,13 @@ export default class App extends Vue {
     font-family: 'Avenir', Helvetica, Arial, sans-serif
     -webkit-font-smoothing: antialiased
     -moz-osx-font-smoothing: grayscale
+    width: 1280px
+    height: 800px
     
   .grid
     display: grid
-    grid-template-columns: 60% 40%
-    width: 100vw
+    grid-template-columns: 50% 50%
+    width: 1280px
+    height: 720px
+    
 </style>
