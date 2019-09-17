@@ -24,10 +24,10 @@ import SlideInputs from './components/SlideInputs.vue';
 export default class App extends Vue {
   title: string = 'Lorem ipsum dolor sit amet, consectetur adipiscing';
   subtitle: string = 'Lorem ipsum dolor sit amet, consectetur adipiscing';
-  bodyText: string = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dignissim sagittis diam in molesite. Morbi vulputate volutpat massa, ut tincidunt nunc convallisa. Suspendisse dapibus diam sit amet nisl gravida. '
+  bodyText: string = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dignissim sagittis diam in molesite. Morbi vulputate volutpat massa, ut tincidunt nunc convallisa. Suspendisse dapibus diam sit amet nisl gravida.';
 
-  inputChangedHandler($event){
-    switch($event.target.name) {
+  inputChangedHandler($event: any) {
+    switch ($event.target.name) {
       case 'title':
         this.title = $event.target.value;
         break;
@@ -50,6 +50,8 @@ export default class App extends Vue {
   #app
     -webkit-font-smoothing: antialiased
     -moz-osx-font-smoothing: grayscale
+    width: 1280px
+    height: 720px
   .grid
     display: grid
     grid-template-columns: 50% 50%

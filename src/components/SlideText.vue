@@ -13,15 +13,15 @@
     import {Component, Vue, Prop} from 'vue-property-decorator';
 
     @Component
-    export default class SlideText extends Vue { 
+    export default class SlideText extends Vue {
         @Prop(String)
-        title;
+        title !: string;
 
         @Prop(String)
-        subtitle;
+        subtitle !: string;
 
         @Prop(String)
-        bodyText;
+        bodyText !: string;
     }
 </script>
 
