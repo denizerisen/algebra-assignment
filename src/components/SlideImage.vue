@@ -3,7 +3,6 @@
         <img class="img__circle--yellow" src="../assets/yellow-circle.svg" />
         <img class="slide__image" src="../assets/mountain-image.png" alt="mountain image">
         <img class="img__circle--pink" src="../assets/image-background.svg" width="100%" />
-        
   </div>
 </template>
 
@@ -11,10 +10,7 @@
     import {Component, Vue} from 'vue-property-decorator';
 
     @Component
-    export default class SlideImage extends Vue { 
-       
-    }
-
+    export default class SlideImage extends Vue {}
 </script>
 
 <style lang="sass">
@@ -36,5 +32,4 @@
         border-radius: 50%
         z-index: 3
         width: 425px
-
 </style>

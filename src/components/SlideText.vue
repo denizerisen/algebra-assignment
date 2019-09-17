@@ -1,11 +1,11 @@
 <template>
   <div class="slide__column--left">
-    <div class="slide__header__area">
-        <img  src="../assets/header-text-background.svg" width="100%"/>
-        <h1 class="slide__header__area__header">{{headerText}}</h1>
+    <div class="slide__title__area">
+        <img  src="../assets/header-title-background.svg" width="100%"/>
+        <h1 class="slide__title__area__title">{{title}}</h1>
     </div>
-    <h2 class="slide__subheader">{{subheaderText}}</h2>
-    <p class="slide__text">{{text}}</p>
+    <h2 class="slide__subtitle">{{subtitle}}</h2>
+    <p class="slide__bodytext">{{bodyText}}</p>
   </div>
 </template>
 
@@ -15,15 +15,14 @@
     @Component
     export default class SlideText extends Vue { 
         @Prop(String)
-        headerText;
+        title;
 
         @Prop(String)
-        subheaderText;
+        subtitle;
 
         @Prop(String)
-        text;
+        bodyText;
     }
-
 </script>
 
 <style lang="sass">
@@ -37,24 +36,26 @@
         justify-self: center
         width: 100%
 
-    .slide__header__area
+    .slide__title__area
         max-height: 170px
 
-    .slide__header, .slide__subheader
+    .slide__title, .slide__subtitle
         font-weight: 100
 
-    .slide__header__area__header
-        font-size: 3.5em
+    .slide__title__area__title
+        font-size: 3.4em
         line-height: 1
+        padding: 0 15px
         transform: translateY(100%) translateY(-5.2em)
+        height: 110px
         
-    .slide__subheader
+    .slide__subtitle
         font-size: 35px
         margin: 0
         padding: 0 10px
 
-    .slide__text
-        font-family: 'Gaegu', cursive
+    .slide__bodytext
+        +font($font-gaegu, 100)
         text-align: left
         margin-top: 2em
         padding-right: 15px

@@ -1,4 +1,12 @@
 /*-----color variables-----*/
 $lilac: #AA98D8
+$lightgrey: #C4C4C4
 
-/*-----type variables-----*/
+/*-----type variables and mixins-----*/
+
+$font-chewy: Chewy, cursive
+$font-gaegu: Gaegu, cursive
+
+=font($font-stack, $weight)
+    font-family: $font-stack
+    font-weight: $weight
